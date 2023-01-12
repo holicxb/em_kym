@@ -35,6 +35,19 @@ public class Ex1_work {
 			fb[i] = fb[i-2] + fb[i-1];
 			System.out.print(fb[i] + " ");
 		}
+		System.out.println();
+		System.out.println("--------------------");
+		int num1 = 1;
+		int num2 = 0;
+		int num3 = 0;
+		
+		for(int i = 0;	i < n;	i++) {
+			num2 = num3;
+			num3 = num1;
+			num1 = num2 + num3;
+			
+			System.out.printf("%d ", num3);
+		}
 		
 	}//main
 	

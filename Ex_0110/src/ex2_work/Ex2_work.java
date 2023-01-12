@@ -40,12 +40,9 @@ public class Ex2_work {
 			
 			if(i % n == 0) {
 				x++;
-				
 			}else {
 				x--;
 				y++;
-				
-			
 				if(y == n) {
 			
 					y = 0;
@@ -53,7 +50,6 @@ public class Ex2_work {
 				if(x < 0) {
 					x = n - 1;
 				}
-			
 			}		
 		}
 		System.out.println();
