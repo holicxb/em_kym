@@ -17,9 +17,12 @@ public class VendingMain {
 		//coke (을)를 선택하셨습니다
 		//잔액 : 100원
 		
-		int count = 0;
 		Scanner scan = new Scanner(System.in);
 		Vending[] v = new Vending[4];
+		Vending[] canDrink = new Vending[4];
+		//배열 사이즈를 나중에 정할 수는 없나?
+		//미리 4로 정하는 경우 null 오류가 발생함
+		int count = 0;
 		//음료 목록
 		
 		for(int i = 0;	i < v.length;	i++) {
@@ -41,30 +44,32 @@ public class VendingMain {
 		
 		//금액보다 낮은 음료 판단하여 출력하기
 		for(int i = 0;	i < v.length;	i++) {
+			canDrink[i] = new Vending();
+			canDrink[i].setCan("");
+			canDrink[i].setWon(0);
 			if(coin >= v[i].getWon()) {
-				System.out.println(v[i].getCan() + " - " + v[i].getWon());
-//				v[count++].setCan(v[i].getCan());
-//				v[count++].setWon(v[i].getWon());
+				canDrink[count].setCan(v[i].getCan());
+				canDrink[count].setWon(v[i].getWon());
+				System.out.println(canDrink[count].getCan() + " - " + canDrink[count].getWon());
+				count++;
 			}
 		}
 		
 		//목록 중에 음료 선택하기
 		System.out.print(">> ");
 		String myPick = scan.next();
-		
+		boolean exist = false;
 		//선택한 음료가 있는지 없는지 판단하여 선택하였음을 출력
-		for(int i = 0;	i < v.length;	i++) {
-			
-			
+		for(int i = 0;	i < canDrink.length;	i++) {
+			if(myPick.equalsIgnoreCase(canDrink[i].getCan())) {
+				System.out.println(canDrink[i].getCan() + " 을(를) 선택하셨습니다");
+				System.out.println("잔액 : " + (coin - canDrink[i].getWon()));
+				exist = true;
+			}
 		}
-		
-		
-		//잔액 출력
-		
-		
-		
-		
-		
+		if(exist == false) {
+			System.out.println("해당음료는 구매 불가");
+		}
 	}//main
 	
 }

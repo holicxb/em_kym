@@ -28,12 +28,6 @@ public class Vending {
 		this.won = won;
 	}
 	
-	
-	
-	
-	
-	
-	
 //	public void myPick(String myPick) {
 //		
 //		for(int i = 0;	i < drink.length;	i++) {
@@ -48,36 +42,5 @@ public class Vending {
 //	public void canDrink(int coin) {
 //		
 //	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	public String[][] getDrink() {
-//		return drink;
-//	}
-//	
-//	public String getCan() {
-//		return can;
-//	}
-//	public void setCan(String can) {
-//		this.can = can;
-//	}
-//	public int getWon() {
-//		return won;
-//	}
-//	public void setWon(int won) {
-//		this.won = won;
-//	}
-//	
-	
 	
 }
