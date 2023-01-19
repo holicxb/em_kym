@@ -8,7 +8,7 @@ public class AnagramMain2 {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
-		String[] strArr = { "HOPE", "APPLE", "JAVA" };
+		String[] strArr = { "HOPE", "APPLE", "JAVA", "BANANA" };
 		Random rnd = new Random();
 		Scanner sc = new Scanner(System.in);
 		int num = rnd.nextInt(strArr.length);
