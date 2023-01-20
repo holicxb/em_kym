@@ -14,8 +14,9 @@ public class Work {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 : ");
-		String str = sc.next();
+		String str = "";
 		try {
+			str = sc.next();
 			int num = Integer.parseInt(str);
 			System.out.println("결과 : " + num);
 		} catch (Exception e) {
