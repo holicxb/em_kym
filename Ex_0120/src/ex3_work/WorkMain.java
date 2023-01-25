@@ -9,6 +9,7 @@ public class WorkMain {
 
 		// 아래와 같은 결과를 출력하되,
 		// try-catch구문을 사용하지 않고 코드를 작성하시오
+		// 음의 정수는 판단하지 않기
 
 		// 정수 : 123 입력 받기
 		// 123은 정수입니다
@@ -34,9 +35,9 @@ public class WorkMain {
 		} else {
 			System.out.println(str + "은(는) 정수가 아닙니다");
 		}
-		
+
 		System.out.println("-------------------");
-		
+
 		isNum = str.matches("-?\\d+");
 		if (isNum) {
 			System.out.println(str + "은(는) 정수입니다");
@@ -44,7 +45,7 @@ public class WorkMain {
 			System.out.println(str + "은(는) 정수가 아닙니다");
 		}
 		System.out.println("---------------------");
-		
+
 		for (int i = 0; i < cStr.length; i++) {
 			if (cStr[i] < '0' || cStr[i] > '9') {
 				isNum = false;
@@ -58,7 +59,7 @@ public class WorkMain {
 		} else {
 			System.out.println(str + "은(는) 정수가 아닙니다");
 		}
-		
+
 	}// main
 
 }

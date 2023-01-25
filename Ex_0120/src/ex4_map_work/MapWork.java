@@ -41,6 +41,17 @@ public class MapWork {
 			System.out.println("아이디가 존재하지 않습니다");
 		}
 		
-		
+		System.out.println("------------------------");
+		if(!map.containsKey(id)) {//id가(키값이) 존재하지 않는 값을 받았는가 
+			System.out.println("아이디가 존재하지 않습니다");
+		}else {
+			//아이디는 존재하는 경우
+			//키보드에서 받은 아이디와 키값이 일치하는 value값을 가져와서 pwd와 비교
+			if(pw != map.get(id)) {
+				System.out.println("비밀번호 불일치");
+			}else {
+				System.out.println("로그인 성공");
+			}
+		}
 	}//main
 }
