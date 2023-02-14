@@ -29,9 +29,9 @@ public class WordGame extends Thread {
 
 	@Override
 	public void run() {
+		Random rnd = new Random();
 		while (isCheck) {
 			try {
-				Random rnd = new Random();
 				if (timer % 3 == 0) {
 					list.add(fruit[rnd.nextInt(fruit.length)]);
 				}
