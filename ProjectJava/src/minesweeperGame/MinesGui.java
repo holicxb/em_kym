@@ -34,7 +34,7 @@ public class MinesGui implements ActionListener {
 	// 고급 : 가로 22, 세로 22, 지뢰 99개
 
 	JComboBox dropbox;
-	String[] level = { "메뉴", "초급", "중급", "고급", "사용자 지정" };
+	String[] level = {"초급", "중급", "고급", "사용자 지정" };
 
 	JFrame frame;
 	JPanel textPanel;
@@ -47,7 +47,7 @@ public class MinesGui implements ActionListener {
 
 	JMenuBar mb = new JMenuBar();
 	JMenu levelmenu = new JMenu("레벨");
-	JMenuItem[] levelList = new JMenuItem[5];
+	JMenuItem[] levelList = new JMenuItem[level.length];
 	JMenu rankmenu = new JMenu("랭킹");
 	JMenuItem showRank = new JMenuItem("랭킹 보기");
 	
