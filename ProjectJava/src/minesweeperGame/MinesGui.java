@@ -479,7 +479,7 @@ public class MinesGui implements ActionListener {
 
 	// ½Â¸®Á¶°Ç
 	User user = new User();
-	String path = "c:/minesweeper/rank/";
+	String path = "rank/";
 	RecordUser ru = new RecordUser();
 
 	public void win() {
