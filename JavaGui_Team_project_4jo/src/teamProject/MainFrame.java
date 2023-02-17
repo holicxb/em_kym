@@ -40,7 +40,6 @@ public class MainFrame extends JFrame {
 		btn1.addActionListener(click);
 		btn2.addActionListener(click);
 		btn3.addActionListener(click);
-		System.out.println(getClass().getClassLoader().getResource("imgSet/main/Main.png"));
 
 		add(btn1, new Integer(1));
 		add(btn2, new Integer(1));

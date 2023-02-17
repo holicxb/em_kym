@@ -33,10 +33,6 @@ public class Field {
 		return route;
 	}
 
-	public void setRoute(boolean[][] route) {
-		this.route = route;
-	}
-
 	public void isPassPoss(int x, int y) {
 		if (x < 0 || y < 0 || x == 17 || y == 9) {
 
@@ -113,6 +109,10 @@ public class Field {
 
 	public void setIsTower(int y, int x) {
 		this.isTower[y][x] = !this.isTower[y][x];
+	}
+
+	public void setRoute(int y, int x) {
+		this.route[y][x] = !this.route[y][x];
 	}
 
 	public void setTowerYX(int[][][] towerYX) {

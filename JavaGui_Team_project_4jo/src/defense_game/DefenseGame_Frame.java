@@ -80,13 +80,13 @@ public class DefenseGame_Frame extends JFrame implements Runnable {
 	// 현재 라운드에서 죽을 경우를 대비한 백업
 	int life_die;
 	// 현재 가지고 있는 돈
-	int myMoney = 50;
+	int myMoney = 60;
 	// 현재 라운드에서 죽을 경우를 대비한 백업
 	int myMoney_die;
 	// 이번 라운드에서 처리해야하는 몬스터 수
 	int remainMon = -1;
 	// 게임 속도
-	int[] gameSpeed = { 10, 8, 6, 100, 4 }; // 0 ~ 2 배속 그 외 나머지 설정 값
+	int[] gameSpeed = { 8, 6, 4, 100, 4 }; // 0 ~ 2 배속 그 외 나머지 설정 값
 	// 속도 단위
 	int speed_index = 0;
 	// 점수
@@ -456,7 +456,7 @@ public class DefenseGame_Frame extends JFrame implements Runnable {
 		score_l.setFont(new Font("", Font.BOLD, 20));
 		score_l.setForeground(new Color(255, 255, 255));
 		score_l.setHorizontalAlignment(JLabel.CENTER);
- 
+
 		frame.add(gameTitle, new Integer(1));
 		frame.add(stageInfo_lay, new Integer(1));
 		frame.add(field, new Integer(1));
@@ -725,6 +725,7 @@ public class DefenseGame_Frame extends JFrame implements Runnable {
 			actTower_info.remove(date_key);
 			actTower_display.remove(date_key);
 			fields.setIsTower(yX_index[0], yX_index[1]);
+			fields.setRoute(yX_index[0], yX_index[1]);
 			choiceTower_lay.remove(towerInfo_lay);
 			field.remove(up_un_p);
 			repaint();
@@ -748,7 +749,6 @@ public class DefenseGame_Frame extends JFrame implements Runnable {
 					if (curStageIndex < stages.size() - 1) {
 						curStageIndex++;
 						remainMon = stages.get(curStageIndex).getMount();
-						life += 5;
 					}
 					isClear = false;
 					isRun = true;
@@ -1256,8 +1256,7 @@ public class DefenseGame_Frame extends JFrame implements Runnable {
 							MainBGM.stopMusic();
 							isEnd = false;
 						}
-					}
-					if (remainMon == 0 && !isClear) {
+					} else if (remainMon == 0 && !isClear) {
 						if (curStageIndex == stages.size() - 1) { // 모든 스테이지 완료
 							EndBGM = new Bgm("clearGame.wav");
 							EndBGM.play(-1, -30f);

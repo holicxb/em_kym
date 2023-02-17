@@ -25,10 +25,10 @@ public class DataBase extends JFrame {
 		towerName = new String[] { "Cannon", "Normal", "Magic" };
 		towerAtackSpeed = new int[][] { { 0, 1, 2, 3 }, { 0, 2, 2, 3 }, { 0, 1, 1, 2 } };
 		towerRange = new int[][] { { 0, 1, 1, 2 }, { 0, 2, 2, 2 }, { 0, 3, 3, 4 } };
-		towerDemage = new int[][] { { 0, 2, 3, 5 }, { 0, 2, 3, 4 }, { 0, 4, 5, 6 } };
+		towerDemage = new int[][] { { 0, 2, 4, 6 }, { 0, 2, 4, 6 }, { 0, 4, 6, 8 } };
 		towerImg = new ImageIcon[3][7];
-		towerUpgradePrice = new String[][] { { "2", "6", "12", "불가" }, { "6", "10", "16", "불가" },
-				{ "7", "12", "18", "불가" } };
+		towerUpgradePrice = new String[][] { { "2", "6", "8", "불가" }, { "6", "8", "12", "불가" },
+				{ "8", "11", "14", "불가" } };
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 4; j++) {
 				// 0 : 공격모션, 1 ~ 3 포탑 레벨
@@ -43,15 +43,15 @@ public class DataBase extends JFrame {
 		stageMonHp = new int[5];
 		monImg = new ImageIcon[5];
 		stageMonName = new String[] { "블링키", "잉키", "핑키", "클라이드", "고스트" };
-		stageMonMoney = new int[] { 1, 1, 1, 1, 2 };
+		stageMonMoney = new int[] { 2, 2, 2, 3, 4 };
 		for (int i = 0; i < 5; i++) {
-			stageName[i] = "[" + (i+1) + "]stage";
-			stageMount[i] = (i + 1) * 15;
-			stageMonHp[i] = (i + 1) * 8 + 4;
+			stageName[i] = "[" + (i + 1) + "]stage";
+			stageMount[i] = (i + 1) * 12;
+			stageMonHp[i] = (i + 1) * 8 + 2;
 			String path = "imgSet/monsters/" + stageMonName[i] + ".png";
 			monImg[i] = new ImageIcon(path);
 		}
-		stageMonSpeed = new int[] { 2, 2, 5, 5, 5 };
+		stageMonSpeed = new int[] { 2, 2, 3, 3, 4 };
 	}
 
 	public int[] getStageMonMoney() {
